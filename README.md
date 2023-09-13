@@ -3,6 +3,7 @@
 ##安装方法：
 1. 安装xhost、python，全局安装pynput。
 2. 在/etc/profile中添加：
+   
 if [ "$DISPLAY" != "" ]
 
 then

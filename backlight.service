@@ -1,0 +1,17 @@
+[Unit]
+Description=Backlight
+Requisite=sddm.service
+After=sddm.service
+
+[Service]
+Type=forking
+User=root
+Group=root
+KillMode=control-group
+Restart=always
+RestartSec=30
+ExecStart=/bin/bash /root/script.sh
+Environment=DISPLAY=':0'
+
+[Install]
+WantedBy=multi-user.target

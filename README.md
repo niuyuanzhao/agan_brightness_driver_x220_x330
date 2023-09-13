@@ -4,9 +4,13 @@
 1. 安装xhost、python，全局安装pynput。
 2. 在/etc/profile中添加：
 if [ "$DISPLAY" != "" ]
+
 then
+
  xhost +local:host
+
 fi
+
 以允许后台使用pynput。
 4. 在root主文件夹下放置backlight(来自@xy-tech)、keyboard.py、script.sh这三个文件，通过chmod允许运行。
 5. 将backlight.service中的全部sddm.service改为自己使用的显示管理器服务并注册安装。
